@@ -3,6 +3,7 @@ package com.aueui.clock;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -53,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+           getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+
+        }
         initView();
         initTime();
         initStopWatch();
@@ -116,11 +121,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         tv_stopwatch.setTextColor(Color.BLACK);
                         tv_timer.setTextColor(Color.BLACK);
                         if (isFromTime) {
+                            button.setBackground(getResources().getDrawable(R.drawable.add));
                             button.setVisibility(View.VISIBLE);
                             button.setAnimation(AnimationUtils.moveToViewLocation());
                         }
-                        button.setText("+");
-                        button.setTextSize(40);
                         isFromTime = false;
                         break;
                     case 1:
@@ -141,9 +145,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             button.setVisibility(View.VISIBLE);
                             button.setAnimation(AnimationUtils.moveToViewLocation());
                         }
-                        button.setText("开始");
+                        button.setBackground(getResources().getDrawable(R.drawable.go));
                         button.setPadding(0, 2, 0, 0);
-                        button.setTextSize(20);
                         isFromTime = false;
                         break;
                     case 3:
@@ -155,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             button.setVisibility(View.VISIBLE);
                             button.setAnimation(AnimationUtils.moveToViewLocation());
                         }
-                        button.setText("开始");
+                        button.setBackground(getResources().getDrawable(R.drawable.go));
                         button.setPadding(0, 2, 0, 0);
                         button.setTextSize(20);
                         isFromTime = false;
@@ -220,6 +223,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tv_stopwatch.setTextColor(Color.BLACK);
                 tv_timer.setTextColor(Color.BLACK);
                 mViewPager.setCurrentItem(0);
+                button.setBackground(getResources().getDrawable(R.drawable.add));
                 break;
             case R.id.tv_time:
                 tv_alarm_clock.setTextColor(Color.BLACK);
@@ -234,6 +238,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tv_stopwatch.setTextColor(getResources().getColor(R.color.blue));
                 tv_timer.setTextColor(Color.BLACK);
                 mViewPager.setCurrentItem(2);
+                button.setBackground(getResources().getDrawable(R.drawable.go));
                 break;
             case R.id.tv_timer:
                 tv_alarm_clock.setTextColor(Color.BLACK);
@@ -241,6 +246,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tv_stopwatch.setTextColor(Color.BLACK);
                 tv_timer.setTextColor(getResources().getColor(R.color.blue));
                 mViewPager.setCurrentItem(3);
+                button.setBackground(getResources().getDrawable(R.drawable.go));
                 break;
             case R.id.button:
                 switch (mViewPager.getCurrentItem()) {
@@ -253,12 +259,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             handler.removeMessages(1);
                             startTime();
                             isPaused = false;
-                            button.setText("暂停");
+                            button.setBackground(getResources().getDrawable(R.drawable.stop));
                             isStart = true;
                         } else {
                             isPaused = true;
                             // PassedTime = 0;
-                            button.setText("继续");
+                            button.setBackground(getResources().getDrawable(R.drawable.go));
                             isStart = false;
                         }
                         break;

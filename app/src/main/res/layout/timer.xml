@@ -5,211 +5,228 @@
     android:id="@+id/tv_sec"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/round_bg">
+    android:background="#f1f1f1"
+    tools:ignore="DuplicateIds">
 
-    <TextView
-        android:id="@+id/tv_num0"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="0"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_num9"
-        app:layout_constraintStart_toEndOf="@+id/tv_num7"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num8"
-        app:layout_constraintVertical_bias="0.018" />
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/tv_num9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="9"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.009"
-        app:layout_constraintStart_toEndOf="@+id/tv_num8"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num6" />
+        <TextView
+            android:id="@+id/tv_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:text="00"
+            android:textColor="@color/blue"
+            android:textSize="50sp" />
 
-    <TextView
-        android:id="@+id/tv_num7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="24dp"
-        android:text="7"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num4" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_weight="1"
+            android:text="小时"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/tv_num8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="24dp"
-        android:text="8"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_num7"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num5" />
+        <TextView
+            android:id="@+id/tv_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="00"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:textSize="50sp" />
 
-    <TextView
-        android:id="@+id/tv_num6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="6"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.009"
-        app:layout_constraintStart_toEndOf="@+id/tv_num5"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num3" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="分"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/tv_num5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="24dp"
-        android:text="5"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_num4"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num2" />
 
-    <TextView
-        android:id="@+id/tv_num2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
-        android:text="2"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_num1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_min" />
+        <TextView
+            android:id="@+id/tv_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="00"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:textSize="50sp" />
 
-    <TextView
-        android:id="@+id/tv_num4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="24dp"
-        android:text="4"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num1" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_weight="1"
+            android:text="秒"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/tv_num1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="32dp"
-        android:text="1"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_min" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="8dp"
-        android:text="秒"
-        android:textColor="@color/blue"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_sec"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_sec"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="92dp"
-        android:text="00"
-        android:textColor="@color/blue"
-        android:textSize="60sp"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/tv">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="128dp"
-        android:text="分"
-        android:textColor="@color/blue"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_min"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_min"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:text="00"
-        android:textColor="@color/blue"
-        android:textSize="60sp"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/tv_hour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="92dp"
-        android:text="00"
-        android:textColor="@color/blue"
-        android:textSize="60sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="15dp"
+                android:text="1"
+                android:textColor="#000000"
+                android:textSize="45sp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="128dp"
-        android:text="小时"
-        android:textColor="@color/blue"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_hour"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_num3"
-        android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tv_num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_num3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:text="3"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/tv_num4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="10dp"
+                android:text="4"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_num5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="5"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_num6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:text="6"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="356dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:text="3"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.009"
-        app:layout_constraintStart_toEndOf="@+id/tv_num1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_min" />
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_num7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="10dp"
+            android:text="7"
+            android:textColor="#000000"
+            android:textSize="45sp" />
+
+
+        <TextView
+            android:id="@+id/tv_num8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:text="8"
+            android:textColor="#000000"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/tv_num9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:text="9"
+            android:textColor="#000000"
+            android:textSize="45sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_num0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="45sp" />
+    </LinearLayout>
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

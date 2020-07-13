@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2F2F2">
+    android:background="#f1f1f1">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -21,7 +21,7 @@
         <TextView
             android:id="@+id/btn_exit"
             android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:layout_height="20dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/btn_exit" />
@@ -56,7 +56,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/round_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,11 +71,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:amPmBackgroundColor="#FFFFFF"
+                android:amPmBackgroundColor="#000"
                 android:amPmTextColor="#5B80F0"
-                android:background="#FFFFFF"
                 android:numbersBackgroundColor="#00BAFF"
-                android:numbersSelectorColor="#FFFFFF"
+                android:numbersSelectorColor="#000"
                 android:numbersTextColor="#FFFFFF" />
 
             <LinearLayout
@@ -95,11 +93,7 @@
                     android:textColor="#000000"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="10" />
+
 
                 <TextView
                     android:id="@+id/btn_bell"
@@ -111,7 +105,8 @@
                     android:gravity="center"
                     android:text="@string/alarm_repeat_once"
                     android:textColor="#000000"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    tools:ignore="DuplicateIds" />
 
             </LinearLayout>
 

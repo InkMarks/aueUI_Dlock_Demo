@@ -11,7 +11,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#0A979797">
+        android:background="#f1f1f1">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -29,20 +29,24 @@
                 android:id="@+id/tv_alarm_clock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="1"
                 android:text="@string/alarm_clock"
+                android:textStyle="bold"
                 android:textColor="#FF168AFB"
-                android:textSize="24sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginTop="4dp"
                 android:text="@string/time"
                 android:textColor="#000000"
-                android:textSize="24sp" />
+                android:textStyle="bold"
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/tv_stopwatch"
@@ -50,17 +54,21 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Stopwatch"
+                android:layout_marginTop="4dp"
                 android:textColor="#000000"
-                android:textSize="24sp" />
+                android:textStyle="bold"
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/tv_timer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginTop="4dp"
                 android:text="@string/timer"
                 android:textColor="#000000"
-                android:textSize="24sp" />
+                android:textStyle="bold"
+                android:textSize="22sp" />
 
         </LinearLayout>
 
@@ -68,27 +76,26 @@
             android:id="@+id/viewPager"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.818"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.666">
 
         </android.support.v4.view.ViewPager>
 
         <Button
             android:id="@+id/button"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginBottom="24dp"
-            android:background="@drawable/fab_bg"
+            android:background="@drawable/add"
             android:gravity="center"
             android:paddingBottom="5dp"
-            android:text="+"
-            android:textColor="#FFFFFF"
-            android:textSize="48sp"
             app:layout_constraintBottom_toBottomOf="@+id/viewPager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
